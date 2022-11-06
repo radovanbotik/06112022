@@ -1,0 +1,11 @@
+.styled-navbar {
+  display: flex;
+  gap: 2ex;
+  justify-content: center;
+}
+.navlink {
+  background-color: none;
+}
+.navlink.active {
+  background-color: fuchsia;
+}

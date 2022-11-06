@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Error from "./pages/Error";
 import Products from "./pages/Products";
-import SharedLayout from "./components/SharedLayout";
+import SharedLayout from "./pages/SharedLayout";
 import "./App.css";
 
 function App() {
