@@ -39,3 +39,12 @@
 .read-the-docs {
   color: #888;
 }
+
+.submit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2ex;
+}
+.submit-form label {
+  background-color: gold;
+}
