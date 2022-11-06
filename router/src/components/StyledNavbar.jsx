@@ -22,6 +22,9 @@ export default function StyledNavbar() {
       <NavLink to="products" className={active}>
         Products
       </NavLink>
+      <NavLink to="login" className={active}>
+        Login
+      </NavLink>
     </nav>
   );
 }

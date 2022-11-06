@@ -26,15 +26,9 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="products" element={<Products />} />
           <Route path="products/:productID" element={<Product />} />
+          <Route path="login" element={<Login setUser={setUser} />} />
+          <Route path="dashboard" element={<Dashboard user={user} />} />
           <Route path="*" element={<Error />} />
-        </Route>
-        <Route path="different" element={<h2>different route</h2>}>
-          <Route
-            path="nested"
-            element={
-              <h2>route nested inside different route outside homepage.</h2>
-            }
-          />
         </Route>
       </Routes>
       {/* <footer style={{ "margin-top": "30px" }}>
