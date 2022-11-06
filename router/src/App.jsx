@@ -5,6 +5,9 @@ import Error from "./pages/Error";
 import Products from "./pages/Products";
 import SharedLayout from "./pages/SharedLayout";
 import Product from "./pages/Product";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -13,6 +16,8 @@ function App() {
   //3.Route for individual pages
   // Route needs 2 attributes path='' to specify URL
   // and element/component which we want to render
+
+  const [user, setUser] = useState(null);
   return (
     <BrowserRouter>
       <Routes>
