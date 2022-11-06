@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Error from "./pages/Error";
+import Products from "./pages/Products";
+import SharedLayout from "./components/SharedLayout";
 import "./App.css";
 
 function App() {
@@ -13,10 +15,24 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="*" element={<Error />} />
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="products" element={<Products />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+        <Route path="different" element={<h2>different route</h2>}>
+          <Route
+            path="nested"
+            element={
+              <h2>route nested inside different route outside homepage.</h2>
+            }
+          />
+        </Route>
       </Routes>
+      {/* <footer style={{ "margin-top": "30px" }}>
+        This Footer Is Displayed Across The App Regardless of the Route.
+      </footer> */}
     </BrowserRouter>
   );
 }
