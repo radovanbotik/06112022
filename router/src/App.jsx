@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Error from "./pages/Error";
 import Products from "./pages/Products";
 import SharedLayout from "./pages/SharedLayout";
+import Product from "./pages/Product";
 import "./App.css";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="products" element={<Products />} />
+          <Route path="products/:productID" element={<Product />} />
           <Route path="*" element={<Error />} />
         </Route>
         <Route path="different" element={<h2>different route</h2>}>
