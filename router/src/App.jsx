@@ -7,6 +7,7 @@ import SharedLayout from "./pages/SharedLayout";
 import Product from "./pages/Product";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import ProtectedRoute from "./pages/ProtectedRoute";
 import { useState } from "react";
 import "./App.css";
 
@@ -27,7 +28,14 @@ function App() {
           <Route path="products" element={<Products />} />
           <Route path="products/:productID" element={<Product />} />
           <Route path="login" element={<Login setUser={setUser} />} />
-          <Route path="dashboard" element={<Dashboard user={user} />} />
+          <Route
+            path="dashboard"
+            element={
+              <ProtectedRoute user={user}>
+                <Dashboard user={user} />
+              </ProtectedRoute>
+            }
+          />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
